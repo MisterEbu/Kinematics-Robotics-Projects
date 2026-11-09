@@ -1,6 +1,10 @@
 # Kinematics-Robotics-Projects
 
-Summer project I did to explore forward and inverse kinematics in 6 DOF robotic arms.
+***Note: the implementation of Claude comes from consolidating and formatting the repo.***
+***Additionally, retesting the code virtually was done through Claude.***
+***All code was written by me***
+
+Summer project I did to explore forward and inverse kinematics in 6-DOF robotic arms.
 
 Two 6-DOF arms are driven by an Arduino through an SSC-32U servo controller. You give the code a target for the tool tip (how far out, how high, and what angle the last link points at) and it works out the servo angles that get the arm there.
 
@@ -9,7 +13,7 @@ The finished code is in [`Robot_Arms_Final`](Robot_Arms_Final/Robot_Arms_Final.i
 ## Contents
 
 ```
-Robot_Arms_Final/        final sketch, open this one in the Arduino IDE
+Robot_Arms_Final/        final sketch; open this one in the Arduino IDE
 versions/                the summer versions in order, exactly as they were
 tools/host_test/         test setup that runs the sketches on a PC (no arm needed)
 ```
@@ -43,16 +47,16 @@ Ready. Send: <arm 1-2> <radius cm> <height cm> <gamma deg>
 > 1 20 20 45
 OK arm 1: radius 20.03 cm, height 19.99 cm, gamma 44.9 deg
 > 1 60 60 0
-Target not reachable, arm not moved
+Target not reachable; arm not moved
 > hello
 Usage: <arm 1-2> <radius cm> <height cm> <gamma deg>
 ```
 
-If the target cannot be reached, the arm stays where it is and nothing is sent to the servos. On start-up both arms go to 90 degrees on every servo.
+If the target cannot be reached, the arm stays where it is, and nothing is sent to the servos. On start-up, both arms go to 90 degrees on every servo.
 
 ## How the kinematics works
 
-The base, wrist rotation and gripper are not part of this. The planar model uses three joints: shoulder, elbow and wrist tilt, with link lengths L1 = 14.5 cm, L2 = 18.25 cm and L3 = 10 cm.
+The base, wrist rotation, and gripper are not part of this. The planar model uses three joints: shoulder, elbow, and wrist tilt, with link lengths L1 = 14.5 cm, L2 = 18.25 cm, and L3 = 10 cm.
 
 **Angles.** The servo angles are converted to link angles like this:
 
