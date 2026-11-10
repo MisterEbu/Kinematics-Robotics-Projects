@@ -1,8 +1,6 @@
 # Kinematics-Robotics-Projects
 
-***Note: the implementation of Claude comes from consolidating and formatting the repo.***
-***Additionally, retesting the code virtually was done through Claude.***
-***All code was written by me***
+
 
 Summer project I did to explore forward and inverse kinematics in 6-DOF robotic arms.
 
@@ -178,6 +176,10 @@ bash tools/host_test/run_tests.sh Robot_Arms_Final/Robot_Arms_Final.ino --serial
 - The same script can run `robot_arm_ik_fixed` from `versions/` for comparison. The Jacobian version aborts in the test because of the buffer overflow described above.
 
 This is not the real Arduino toolchain. It cannot catch things like flash or RAM limits or timing on the board, and it cannot tell whether the kinematics match the physical arm.
+
+***Note: the implementation of Claude comes from consolidating and formatting the repo.***
+***Additionally, retesting the code virtually was done through Claude.***
+***All code was written by me***
 
 ## Limitations and next steps
 
